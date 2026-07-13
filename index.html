@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRS - Design System</title>
+
+    <!-- Preconnect for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Expanded Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" 
+          rel="stylesheet"> 
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- Toggle Menu - Header -->
+    <header>
+      <div class="header-left">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+          </svg>
+        </button>
+
+        <div class="logo-container">
+          <span class="logo">DS</span>
+          <span class="logo-dot">.</span>
+        </div>
+
+        <div class="version-badge">
+          <span class="version">v1.0.0</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <span class="badge badge-outline">WEB DEVELOPER</span>
+        <span class="badge badge-primary">DESIGN SYSTEM</span>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-label">FOUNDATION</span>  
+      </div>
+
+      <nav id="nav">
+        <button class="nav-btn active" data-section="colors">
+          <span class="num">01</span>
+          <span>Colors</span>
+        </button>
+        <button class="nav-btn" data-section="typography">
+          <span class="num">02</span>
+          <span>Typography</span>
+        </button>
+        <button class="nav-btn" data-section="spacing">
+          <span class="num">03</span>
+          <span>Spacing</span>
+        </button>
+        <button class="nav-btn" data-section="components">
+          <span class="num">04</span>
+          <span>Components</span>
+        </button>
+        <button class="nav-btn" data-section="forms">
+          <span class="num">05</span>
+          <span>Forms</span>
+        </button>
+        <button class="nav-btn" data-section="tokens">
+          <span class="num">06</span>
+          <span>Tokens</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <span class="footer-label">Vanilla HTML • CSS • JS</span>
+        <a href="https://github.com/MarieReine26" 
+           target="_blank"
+           rel="noopener noreferrer"
+           class="footer-link">
+          MarieReine Studio
+        </a>
+        <span class="year">© 2026</span>
+      </div>
+    </aside>
+
+    <!-- Overlay for mobile menu-->
+    <div id="overlay" class="overlay"></div>
+
+    <!---- Main Content of design system ---->
+    <main id="main">
+      <div class="content">
+
+        <!-- 01 COLORS -->
+        <section id="colors" class="section active">
+          <div class="section-title">
+            <div class="row">
+              <span class="num">01</span>
+              <h2>Colors</h2>
+            </div>
+            <p>Semantic color tokens - reference by role, not by value.</p>
+          </div>
+          
+          <!-- Semantic Tokens -->
+          <div class="sub-label">Semantic Tokens</div>
+          <div class="color-grid">
+            <div class="swatch" onclick="copyToClipboard('#0a0a0a', this)">
+              <div class="swatch-color" style="background: #0a0a0a;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Background</div>
+                <div class="swatch-token">--bg</div>
+                <div class="swatch-desc">Page canvas</div>
+              </div>
+            </div>
+
+            <div class="swatch" onclick="copyToClipboard('#f0f0f0', this)">
+              <div class="swatch-color" style="background: #f0f0f0;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Foreground</div>
+                <div class="swatch-token">--fg</div>
+                <div class="swatch-desc">Default text</div>
+              </div>
+            </div>
+
+            <div class="swatch" onclick="copyToClipboard('#00ff88', this)">
+              <div class="swatch-color" style="background: #00ff88;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Primary</div>
+                <div class="swatch-token">--primary</div>
+                <div class="swatch-desc">Interactive accent</div>
+              </div>
+            </div>
+
+            <div class="swatch" onclick="copyToClipboard('#111111', this)">
+              <div class="swatch-color" style="background: #111111;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Surface</div>
+                <div class="swatch-token">--surface</div>
+                <div class="swatch-desc">Cards / Panels</div>
+              </div>
+            </div>
+
+            <div class="swatch" onclick="copyToClipboard('#1a1a1a', this)">
+              <div class="swatch-color" style="background: #1a1a1a;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Secondary</div>
+                <div class="swatch-token">--raised</div>
+                <div class="swatch-desc">Elevated surfaces</div>
+              </div>
+            </div>
+
+            <div class="swatch" onclick="copyToClipboard('#666666', this)">
+              <div class="swatch-color" style="background: #666666;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Muted</div>
+                <div class="swatch-token">--muted</div>
+                <div class="swatch-desc">Labels / Captions</div>
+              </div>
+            </div>
+
+            <div class="swatch" onclick="copyToClipboard('rgba(255,255,255,0.09)', this)">
+              <div class="swatch-color" style="background: rgba(255, 255, 255, 0.09);"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Border</div>
+                <div class="swatch-token">--border</div>
+                <div class="swatch-desc">Hairline rules</div>
+              </div>
+            </div>
+
+            <div class="swatch" onclick="copyToClipboard('#ff3333', this)">
+              <div class="swatch-color" style="background: #ff3333;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Danger</div>
+                <div class="swatch-token">--danger</div>
+                <div class="swatch-desc">Error / Descructive</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Palette -->
+          <div class="sub-label">Data Palette</div>
+          <div class="palette">
+            <div class="palette-chip" onclick="copyToClipboard('#00ff88')">
+              <div class="palette-dot" style="background: #00ff88;"></div>
+              <div>
+                <div class="palette-label">Emerald</div>
+                <div class="palette-hex">#00ff88</div>
+              </div>
+            </div>
+            <div class="palette-chip" onclick="copyToClipboard('#00ccff')">
+              <div class="palette-dot" style="background: #00ccff;"></div>
+              <div>
+                <div class="palette-label">Cyan</div>
+                <div class="palette-hex">#00ccff</div>
+              </div>
+            </div>
+            <div class="palette-chip" onclick="copyToClipboard('#ff6600')">
+              <div class="palette-dot" style="background: #ff6600;"></div>
+              <div>
+                <div class="palette-label">Orange</div>
+                <div class="palette-hex">#ff6600</div>
+              </div>
+            </div>
+            <div class="palette-chip" onclick="copyToClipboard('#cc00ff')">
+              <div class="palette-dot" style="background: #cc00ff;"></div>
+              <div>
+                <div class="palette-label">Violet</div>
+                <div class="palette-hex">#cc00ff</div>
+              </div>
+            </div>
+            <div class="palette-chip" onclick="copyToClipboard('#ffcc00')">
+              <div class="palette-dot" style="background: #ffcc00;"></div>
+              <div>
+                <div class="palette-label">Amber</div>
+                <div class="palette-hex">#ffcc00</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CSS global variables (useful for theming, design systems, and UI styling) -->
+          <div class="sub-label">CSS - Global Variables</div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-lang">CSS</span>
+              <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+            </div>
+            <pre>:root {
+  --bg: #0a0a0a;            <span class="comment">/* page canvas */</span>
+  --fg: #f0f0f0;            <span class="comment">/* default text */</span>
+  --primary: #00ff88;       <span class="comment">/* interactive accent */</span>
+  --surface: #111111;       <span class="comment">/* card / panel */</span>
+  --raised: #1a1a1a;        <span class="comment">/* elevated surface */</span>
+  --muted: #666666;         <span class="comment">/* labels, captions */</span>
+  --border: rgba(255,255,255,0.09);
+  --danger: #ff3333;
+}</pre>
+          </div>
+        </section>
+
+        <!-- 02 TYPOGRAPHY -->
+        <section id="typography" class="section">
+          <div class="section-title">
+            <div class="row">
+              <span class="num">02</span>
+              <h2>Typography</h2>
+            </div>
+            <p>Three families — display, body, mono. Each serves a distinct role.</p>
+          </div>
+          
+          <!-- Display - Archivo Black -->
+          <div class="sub-label">DISPLAY - ARCHIVO BLACK</div>
+            <div class="box">
+              <div class="type-wrapper">
+              <div class="type-row">
+                <span class="type-meta">60px / 6x1</span>
+                <span style="font-family: 'Archivo Black', sans-serif; font-size: 3.75rem; line-height: 1; letter-spacing: -0.03em;">Design Systems</span>
+              </div>
+              <div class="type-row">
+                <span class="type-meta">48px / 5x1</span>
+                <span style="font-family: 'Archivo Black', sans-serif; font-size: 3rem; line-height: 1; letter-spacing: -0.03em;">Component Library</span>
+              </div>
+              <div class="type-row">
+                <span class="type-meta">36px / 4x1</span>
+                <span style="font-family: 'Archivo Black', sans-serif; font-size: 2.25rem; line-height: 1; letter-spacing: -0.02em;">Token Architecture</span>
+              </div>
+              <div class="type-row">
+                <span class="type-meta">30px / 3x1</span>
+                <span style="font-family: 'Archivo Black', sans-serif; font-size: 1.875rem; line-height: 1;">Theming & Variants</span>
+              </div>
+              <div class="type-row">
+                <span class="type-meta">24px / 2x1</span>
+                <span style="font-family: 'Archivo Black', sans-serif; font-size: 1.5rem; line-height: 1;">Accessibility First</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Body - Inter -->
+          <div class="sub-label">BODY - INTER</div>
+            <div class="box">
+              <div class="type-wrapper">
+              <div class="type-row">
+                <span class="type-meta">20px / xl</span>
+                <span style="font-family: 'Inter', sans-serif; font-size: 1.25rem; line-height: 1.6;">The quick brown fox jumps over the lazy dog.</span>
+              </div>
+              <div class="type-row">
+                <span class="type-meta">18px / lg</span>
+                <span style="font-family: 'Inter', sans-serif; font-size: 1.125rem; line-height: 1.6;">The quick brown fox jumps over the lazy dog.</span>
+              </div>
+              <div class="type-row">
+                <span class="type-meta">16px / base</span>
+                <span style="font-family: 'Inter', sans-serif; font-size: 1rem; line-height: 1.6;">The quick brown fox jumps over the lazy dog.</span>
+              </div>
+              <div class="type-row">
+                <span class="type-meta">14px / sm</span>
+                <span style="font-family: 'Inter', sans-serif; font-size: 0.875rem; line-height: 1.6;">The quick brown fox jumps over the lazy dog.</span>
+              </div>
+              <div class="type-row">
+                <span class="type-meta">12px / xs</span>
+                <span style="font-family: 'Inter', sans-serif; font-size: 0.75rem; line-height: 1.6;">The quick brown fox jumps over the lazy dog.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mono - JetBrains Mono -->
+          <div class="sub-label">Mono - JetBrains Mono</div>
+            <div class="box">
+              <div class="type-wrapper">
+              <div class="type-row">
+                <span class="type-meta">16px / base</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 1rem; color: var(--primary);">const system = new DesignSystem();</span>
+              </div>
+              <div class="type-row">
+                <span class="type-meta">14px / sm</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; color: var(--primary)">const system = new DesignSystem();</span>
+              </div>
+              <div class="type-row">
+                <span class="type-meta">12px / xs</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary)">const system = new DesignSystem();</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CSS Font Stack -->
+          <div class="sub-label">CSS Font Stack</div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-lang">CSS</span>
+              <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+            </div>
+            <pre><span class="comment">/* Font stack */</span>
+--display: 'Archivo Black', sans-serif;
+--sans: 'Inter', sans-serif;
+--mono: 'JetBrains Mono', monospace;
+
+<span class="comment">/* Usage */</span>
+h1, h2, h3 { font-family: var(--display); }
+body      { font-family: var(--sans); }
+code, pre { font-family: var(--mono); }</pre>
+          </div>
+        </section>
+
+
+        <!-- 03 SPACING -->
+        <section id="spacing" class="section">
+          <div class="section-title">
+            <div class="row">
+              <span class="num">03</span>
+              <h2>Spacing</h2>
+            </div>
+            <p>Consistent spacing scale across margin, padding, and gap.</p>
+          </div>
+
+          <!-- Spacing scale table -->
+          <div class="sub-label">Scale System</div>
+          <div class="spacing-wrapper">
+            <table class="ds-table">
+              <thead>
+                <tr>
+                  <th>Token</th>
+                  <th>Pixels</th>
+                  <th>Rem</th>
+                  <th>Visual</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-primary">space-0</td>
+                  <td class="td-fg">0px</td>
+                  <td class="td-muted">0rem</td>
+                  <td><div class="ruler" style="width: 0px;"></div></td>
+                </tr>
+                <tr>
+                  <td class="td-primary">space-1</td>
+                  <td class="td-fg">4px</td>
+                  <td class="td-muted">0.25rem</td>
+                  <td><div class="ruler" style="width: 4px;"></div></td>
+                </tr>
+                <tr>
+                  <td class="td-primary">space-2</td>
+                  <td class="td-fg">8px</td>
+                  <td class="td-muted">0.5rem</td>
+                  <td><div class="ruler" style="width: 8px;"></div></td>
+                </tr>
+                <tr>
+                  <td class="td-primary">space-3</td>
+                  <td class="td-fg">12px</td>
+                  <td class="td-muted">0.75rem</td>
+                  <td><div class="ruler" style="width: 12px;"></div></td>
+                </tr>
+                <tr>
+                  <td class="td-primary">space-4</td>
+                  <td class="td-fg">16px</td>
+                  <td class="td-muted">1rem</td>
+                  <td><div class="ruler" style="width: 16px;"></div></td>
+                </tr>
+                <tr>
+                  <td class="td-primary">space-6</td>
+                  <td class="td-fg">24px</td>
+                  <td class="td-muted">1.5rem</td>
+                  <td><div class="ruler" style="width: 24px;"></div></td>
+                </tr>
+                <tr>
+                  <td class="td-primary">space-8</td>
+                  <td class="td-fg">32px</td>
+                  <td class="td-muted">2rem</td>
+                  <td><div class="ruler" style="width: 32px;"></div></td>
+                </tr>
+                <tr>
+                  <td class="td-primary">space-12</td>
+                  <td class="td-fg">48px</td>
+                  <td class="td-muted">3rem</td>
+                  <td><div class="ruler" style="width: 48px;"></div></td>
+                </tr>
+                <tr>
+                  <td class="td-primary">space-16</td>
+                  <td class="td-fg">64px</td>
+                  <td class="td-muted">4rem</td>
+                  <td><div class="ruler" style="width: 64px;"></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- CSS example -->
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-lang">CSS</span>
+              <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+            </div>
+            <pre>:root {
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+}</pre>
+          </div>
+        </section>
+
+        <!-- 04 COMPONENTS --> 
+        <section id="components" class="section">
+          <div class="section-title">
+            <div class="row">
+              <span class="num">04</span>
+              <h2>Components</h2>
+            </div>
+            <p>Reusable UI components for building consistent and cohesive interfaces.</p>
+          </div>
+
+          <!-- Button Component -->
+          <div class="sub-label">Buttons</div>
+          <div class="box">
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; align-items: center;">
+              <button class="btn btn-md btn-primary">DEPLOY NOW</button>
+              <button class="btn btn-md btn-outline">VIEW DOCS</button>
+              <button class="btn btn-md btn-ghost">CANCEL</button>
+              <button class="btn btn-md btn-danger">DELETE</button>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+              <button class="btn btn-sm btn-primary">SMALL</button>
+              <button class="btn btn-md btn-primary">MEDIUM</button>
+              <button class="btn btn-lg btn-primary">LARGE</button>
+            </div>
+          </div>
+
+          <!-- Exemple of Button HTML -->
+          <div class="sub-label">HTML</div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-lang">HTML</span>
+              <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+            </div>
+            <pre>&lt;button class="btn btn-md btn-primary"&gt;Deploy Now&lt;/button&gt;
+&lt;button class="btn btn-md btn-outline"&gt;View Docs&lt;/button&gt;
+&lt;button class="btn btn-md btn-ghost"&gt;Cancel&lt;/button&gt;
+&lt;button class="btn btn-md btn-danger"&gt;Delete&lt;/button&gt;</pre>
+          </div>
+
+          <!-- Small graphic element - Badges -->
+          <div class="sub-label">Badges</div>
+          <div class="box" style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px;">
+            <span class="badge badge-primary">ACTIVE</span>
+            <span class="badge badge-outline">DRAFT</span>
+            <span class="badge badge-cyan">DEPLOYING</span>
+            <span class="badge badge-muted">ARCHIVED</span>
+            <span class="badge badge-danger">FAILED</span>
+          </div>
+
+          <!-- Stat Cards & Deployments -->
+          <div class="sub-label">Cards</div>
+          <div class="cards-grid">
+            <div class="stat-card">
+              <div class="stat-card-top">
+                <div>
+                  <div class="stat-card-label">API REQUESTS</div>
+                  <div class="stat-card-value">1,248,920</div>
+              </div>
+              <span class="badge badge-primary">+12.4%</span>
+            </div>
+            <div class="stat-card-sub">Last 30 days - p99 latency 48ms</div>
+            <div class="progress"><div class="progress-bar" style="width: 85%; background: var(--primary);"></div></div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <div>
+                <div class="stat-card-label">ERROR RATE</div>
+                <div class="stat-card-value" style="color:var(--danger)">0.03%</div>
+              </div>
+              <span class="badge badge-danger">CRITICAL</span>
+            </div>
+            <div class="stat-card-sub">5xx responses — SLA threshold 0.1%</div>
+            <div class="progress"><div class="progress-bar" style="width:3%; background:var(--danger)"></div></div>
+          </div>
+
+          <div class="deploy-card">
+            <div class="deploy-label">ACTIVE DEPLOYMENTS</div>
+            <div class="deploy-row">
+              <div style="display:flex; align-items:center; gap:24px">
+                <span class="deploy-env">production</span>
+                <span class="deploy-ver">v2.14.1</span>
+              </div>
+              <div class="deploy-right">
+                <span class="deploy-time">3h ago</span>
+                <span class="badge badge-primary">HEALTHY</span>
+              </div>
+            </div>
+            <div class="deploy-row">
+              <div style="display:flex; align-items: center; gap:24px">
+                <span class="deploy-env">staging</span>
+                <span class="deploy-ver">v2.15.0-rc.2</span>
+              </div>
+              <div class="deploy-right">
+                <span class="deploy-time">12m ago</span>
+                <span class="badge badge-cyan">DEPLOYING</span>
+              </div>
+            </div>
+            <div class="deploy-row">
+              <div style="display:flex; align-items:center; gap:24px">
+                <span class="deploy-env">dev</span>
+                <span class="deploy-ver">v2.15.0-alpha.8</span>
+              </div>
+              <div class="deploy-right">
+                <span class="deploy-time">just now</span>
+                <span class="badge badge-primary">HEALTHY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Code Block -->
+          <div class="sub-label">Code Block</div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-lang">JavaScript</span>
+              <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+            </div>
+            <pre>function debounce(fn, delay) {
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => fn(...args), delay);
+    };
+  }
+
+  const search = debounce(query => {
+    fetch(`/api/search?q=${query}`)
+      .then(r => r.json())
+      .then(render);
+  }, 300);</pre>
+          </div>
+        </section>
+
+        <!-- 05 FORMS -->
+        <section id="forms" class="section">
+          <div class="section-title">
+            <div class="row">
+              <span class="num">05</span>
+              <h2>Forms</h2>
+            </div>
+            <p>Input elements and form controls. Always label, always focus-visible.</p>
+          </div>
+
+          <div class="box" style="max-width: 560px;">
+            <div class="form-group">
+              <label class="form-label">EMAIL ADDRESS</label>
+              <input class="form-input" type="email" placeholder="username@domain.com"/>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">FRAMEWORK</label>
+              <select class="form-select">
+                <option>React</option>
+                <option>Vue</option>
+                <option>Svelte</option>
+                <option>Next.js</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">DESCRIPTION</label>
+              <textarea class="form-textarea" rows="3" placeholder="Describe your component..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <div class="form-checkbox-row">
+                <input type="checkbox" id="darkmode" checked />
+                <label for="darkmode">Enable dark mode</label>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 24px;">
+              <div class="form-checkbox-row">
+                <input type="checkbox" id="notify" />
+                <label for="notify">Receive deployment alerts</label>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" data-submit-feedback class="btn btn-primary">
+              SUBMIT
+            </button>
+          </div>
+
+          <!-- HTML Form Example -->
+          <div class="sub-label">HTML FORM</div>
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-lang">HTML</span>
+              <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+            </div>
+            <pre>&lt;div class="form-group"&gt;
+  &lt;label class="form-label"&gt;Email Address&lt;/label&gt;
+  &lt;input 
+    class="form-input" 
+    type="email" 
+    placeholder="username@domain.com" 
+  /&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </section>
+
+        <!-- 06 TOKENS -->
+        <section id="tokens" class="section">
+          <div class="section-title">
+            <div class="row">
+              <span class="num">06</span>
+              <h2>Tokens</h2>
+            </div>
+            <p>All design tokens exported as CSS custom properties.</p>
+          </div>
+          
+          <!-- Tokens Table -->
+          <div class="ds-table-wrapper">
+          <table class="ds-table">
+            <thead>
+              <tr>
+                <th>CSS VARIABLE</th>
+                <th>VALUE</th>
+                <th>USAGE</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr><td class="td-primary">--bg</td><td class="td-muted">#0a0a0a</td><td class="td-fg">background</td></tr>
+              <tr><td class="td-primary">--fg</td><td class="td-muted">#f0f0f0</td><td class="td-fg">color (default text)</td></tr>
+              <tr><td class="td-primary">--primary</td><td class="td-muted">#00ff88</td><td class="td-fg">background / color</td></tr>
+              <tr><td class="td-primary">--primary-fg</td><td class="td-muted">#0a0a0a</td><td class="td-fg">color on primary</td></tr>
+              <tr><td class="td-primary">--surface</td><td class="td-muted">#111111</td><td class="td-fg">card background</td></tr>
+              <tr><td class="td-primary">--raised</td><td class="td-muted">#1a1a1a</td><td class="td-fg">elevated surface</td></tr>
+              <tr><td class="td-primary">--muted</td><td class="td-muted">#666666</td><td class="td-fg">subdued text</td></tr>
+              <tr><td class="td-primary">--border</td><td class="td-muted">rgba(255,255,255,0.09)</td><td class="td-fg">border-color</td></tr>
+              <tr><td class="td-primary">--danger</td><td class="td-muted">#ff3333</td><td class="td-fg">error / destructive</td></tr>
+              <tr><td class="td-primary">--cyan</td><td class="td-muted">#00ccff</td><td class="td-fg">chart / status</td></tr>
+              <tr><td class="td-primary">--orange</td><td class="td-muted">#ff6600</td><td class="td-fg">chart / warning</td></tr>
+              <tr><td class="td-primary">--violet</td><td class="td-muted">#cc00ff</td><td class="td-fg">chart / accent</td></tr>
+              <tr><td class="td-primary">--amber</td><td class="td-muted">#ffcc00</td><td class="td-fg">chart / highlight</td></tr>
+              <tr><td class="td-primary">--mono</td><td class="td-muted">'JetBrains Mono', monospace</td><td class="td-fg">font-family (code)</td></tr>
+              <tr><td class="td-primary">--sans</td><td class="td-muted">'Inter', sans-serif</td><td class="td-fg">font-family (body)</td></tr>
+              <tr><td class="td-primary">--display</td><td class="td-muted">'Archivo Black', sans-serif</td><td class="td-fg">font-family (headings)</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <!-- Tokens Quick Reference -->
+          <div class="quick-ref">
+            <div class="quick-ref-label">Quick Reference</div>
+            <div class="quick-ref-wrapper">
+              <div class="quick-ref-grid">
+                <div class="quick-ref-row"><span class="qr-key">Border Radius</span><span class="qr-value">0px (square)</span></div>
+                <div class="quick-ref-row"><span class="qr-key">Base Font Size</span><span class="qr-value">16px</span></div>
+                <div class="quick-ref-row"><span class="qr-key">Spacing Unit</span><span class="qr-value">4px</span></div>
+                <div class="quick-ref-row"><span class="qr-key">Focus Ring</span><span class="qr-value">#00ff88</span></div>
+                <div class="quick-ref-row"><span class="qr-key">Transition</span><span class="qr-value">120ms ease</span></div>
+                <div class="quick-ref-row"><span class="qr-key">Display Font</span><span class="qr-value">Archivo Black</span></div>
+                <div class="quick-ref-row"><span class="qr-key">Body Font</span><span class="qr-value">Inter</span></div>
+                <div class="quick-ref-row"><span class="qr-key">Mono Font</span><span class="qr-value">JetBrains Mono</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CSS Variables - Tokens -->
+          <div class="code-block">
+            <div class="code-block-header">
+              <span class="code-lang">CSS Variables</span>
+              <button class="copy-btn" onclick="copyToClipboard(this)">Copy</button>
+            </div>
+            <pre>:root {
+  --bg: #0a0a0a;
+  --fg: #f0f0f0;
+  --primary: #00ff88;
+  --primary-fg: #0a0a0a;
+  --surface: #111111;
+  --raised: #1a1a1a;
+  --muted: #666666;
+  --border: rgba(255,255,255,0.09);
+  --danger: #ff3333;
+  --cyan: #00ccff;
+  --orange: #ff6600;
+  --violet: #cc00ff;
+  --amber: #ffcc00;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Inter', sans-serif;
+  --display: 'Archivo Black', sans-serif;
+}</pre>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite">Copied to clipboard ✓</div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
