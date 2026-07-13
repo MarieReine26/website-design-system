@@ -4,7 +4,7 @@ A clean, modern, and scalable **Design System** built from scratch with HTML, CS
 
 ## 🎯 Overview
 
-MRS Design System provides a solid foundation for building consistent, accessible, and scalable web interfaces. It follows modern design system principles using semantic tokens instead of hardcoded values.
+MarieReine Studio Design System provides a solid foundation for building consistent, accessible, and scalable web interfaces. It follows modern design system principles using semantic tokens instead of hardcoded values.
 
 ## 🚀 Live Demo
 
