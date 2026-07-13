@@ -6,6 +6,14 @@ A clean, modern, and scalable **Design System** built from scratch with HTML, CS
 
 MRS Design System provides a solid foundation for building consistent, accessible, and scalable web interfaces. It follows modern design system principles using semantic tokens instead of hardcoded values.
 
+## 🚀 Live Demo
+
+**[→ View Live Demo](https://mariereine26.github.io/website-design-system/)**
+
+## 📸 Preview
+
+![MRS Design System Preview](./DS_Screenshots)
+
 ## ✨ Features
 
 - **Semantic Colour Tokens** (Background, Foreground, Primary, Surface, Danger, etc.)
