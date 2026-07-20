@@ -4,15 +4,15 @@ A clean, modern, and scalable **Design System** built from scratch with HTML, CS
 
 ## 🎯 Overview
 
-MarieReine Studio Design System provides a solid foundation for building consistent, accessible, and scalable web interfaces. It follows modern design system principles using semantic tokens instead of hardcoded values.
+R.V. Design System provides a solid foundation for building consistent, accessible, and scalable web interfaces. It follows modern design system principles using semantic tokens instead of hardcoded values.
 
 ## 🚀 Live Demo
 
-**[→ View Live Demo](https://mariereine26.github.io/website-design-system/)**
+**[→ View Live Demo](https://reinevannel.github.io/website-design-system/)**
 
 ## 📸 Preview
 
-![MRS Design System Preview](./DS_Screenshots)
+![RV Design System Preview](./DS_Screenshots)
 
 ## ✨ Features
 
